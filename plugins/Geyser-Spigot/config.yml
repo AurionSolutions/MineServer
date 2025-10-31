@@ -14,9 +14,9 @@
 bedrock:
   # The IP address that will listen for connections.
   # Generally, you should only uncomment and change this if you want to limit what IPs can connect to your server.
-  address: 147.93.6.26
+  # address: 147.93.6.26
   # The port that will listen for connections
-  port: 25565
+  port: 19132
   # Some hosting services change your Java port everytime you start the server and require the same port to be used for Bedrock.
   # This option makes the Bedrock port the same as the Java port every time you start the server.
   # This option is for the plugin version only.
