@@ -4,8 +4,8 @@ FROM eclipse-temurin:21-jdk
 # Define pasta de trabalho
 WORKDIR /minecraft
 
-# Copia o JAR do Paper para dentro do container
-COPY paper-1.21.8-60.jar /minecraft/paper.jar
+# Copia todos os arquivos da pasta atual
+COPY . .
 
 # Cria pasta de dados e define permissões
 RUN mkdir -p /minecraft/data && \
@@ -18,5 +18,5 @@ VOLUME /minecraft/data
 EXPOSE 25565
 EXPOSE 19132
 
-# Inicia o servidor com 4GB de RAM
-CMD ["java", "-Xmx4G", "-Xms4G", "-jar", "paper.jar", "nogui"]
+# Inicia o servidor
+CMD ["java", "-Xmx4G", "-Xms4G", "-jar", "paper-1.21.8-60.jar", "nogui"]
